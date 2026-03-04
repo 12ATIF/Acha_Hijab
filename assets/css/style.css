@@ -1,0 +1,112 @@
+/* ============================================
+   ACHAHIJAB - Main Stylesheet
+   Brand: Achahijab by Annisa Nurfadilla
+   Colors: Primary #C2185B | Secondary #E91E63
+   ============================================ */
+
+/* ==========================================
+   1. BASE / RESET
+   ========================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ==========================================
+   2. CUSTOM SCROLLBAR
+   ========================================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff0f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c2185b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e91e63;
+}
+
+/* ==========================================
+   3. ANIMATIONS
+   ========================================== */
+
+/* Fade-in (scroll reveal) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide-in from left */
+.slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.slide-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide-in from right */
+.slide-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ==========================================
+   4. NAVBAR
+   ========================================== */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #c2185b;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ==========================================
+   5. TESTIMONIAL SLIDER
+   ========================================== */
+.testimonial-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
