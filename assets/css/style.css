@@ -110,3 +110,59 @@ body {
   display: flex;
   transition: transform 0.5s ease;
 }
+
+/* ==========================================
+   6. PRODUCT MODAL & VARIANT SELECTORS
+   ========================================== */
+#product-modal {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#product-modal.hidden-modal {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+#product-modal.show-modal {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+#product-modal > div {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#product-modal.hidden-modal > div {
+  transform: scale(0.95);
+}
+#product-modal.show-modal > div {
+  transform: scale(1);
+}
+
+/* Selector active states */
+.btn-grade {
+  border: 2px solid #f3f4f6;
+  transition: all 0.2s ease;
+}
+.btn-grade:hover {
+  border-color: #f3e8ff;
+  background-color: #faf5ff;
+}
+.btn-grade.active {
+  border-color: #c2185b;
+  background-color: #fff0f5;
+  color: #c2185b;
+}
+
+.btn-size {
+  border: 2px solid #f3f4f6;
+  transition: all 0.2s ease;
+}
+.btn-size:hover {
+  border-color: #f3e8ff;
+  background-color: #faf5ff;
+}
+.btn-size.active {
+  border-color: #c2185b;
+  background-color: #c2185b;
+  color: white;
+}
+

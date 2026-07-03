@@ -235,99 +235,10 @@
             </div>
 
             <!-- Products Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-
-                <!-- Product 1 -->
-                <div
-                    class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 fade-in">
-                    <div class="relative overflow-hidden">
-                        <img src="assets/images/product-1.png" alt="Kerudung Voal Premium"
-                            class="w-full h-48 sm:h-60 object-cover group-hover:scale-105 transition-transform duration-500" />
-                        <span
-                            class="absolute top-3 left-3 bg-primary text-white text-[10px] font-semibold px-3 py-1 rounded-full uppercase tracking-wider">New</span>
-                        <div
-                            class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300 flex items-center justify-center">
-                            <button
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-primary p-3 rounded-full shadow-lg hover:bg-primary hover:text-white">
-                                <i data-lucide="shopping-bag" class="w-4 h-4"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-medium text-gray-800 text-sm mb-1 truncate">Kerudung Voal Premium</h3>
-                        <p class="text-primary font-semibold">Rp 89.000</p>
-                    </div>
-                </div>
-
-                <!-- Product 2 -->
-                <div
-                    class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 fade-in">
-                    <div class="relative overflow-hidden">
-                        <img src="assets/images/product-2.png" alt="Cadar Niqab Sifon"
-                            class="w-full h-48 sm:h-60 object-cover group-hover:scale-105 transition-transform duration-500" />
-                        <span
-                            class="absolute top-3 left-3 bg-amber-500 text-white text-[10px] font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Best
-                            Seller</span>
-                        <div
-                            class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300 flex items-center justify-center">
-                            <button
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-primary p-3 rounded-full shadow-lg hover:bg-primary hover:text-white">
-                                <i data-lucide="shopping-bag" class="w-4 h-4"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-medium text-gray-800 text-sm mb-1 truncate">Cadar Niqab Sifon</h3>
-                        <p class="text-primary font-semibold">Rp 65.000</p>
-                    </div>
-                </div>
-
-                <!-- Product 3 -->
-                <div
-                    class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 fade-in">
-                    <div class="relative overflow-hidden">
-                        <img src="assets/images/product-3.png" alt="Pashmina Diamond"
-                            class="w-full h-48 sm:h-60 object-cover group-hover:scale-105 transition-transform duration-500" />
-                        <span
-                            class="absolute top-3 left-3 bg-primary text-white text-[10px] font-semibold px-3 py-1 rounded-full uppercase tracking-wider">New</span>
-                        <div
-                            class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300 flex items-center justify-center">
-                            <button
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-primary p-3 rounded-full shadow-lg hover:bg-primary hover:text-white">
-                                <i data-lucide="shopping-bag" class="w-4 h-4"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-medium text-gray-800 text-sm mb-1 truncate">Pashmina Diamond</h3>
-                        <p class="text-primary font-semibold">Rp 75.000</p>
-                    </div>
-                </div>
-
-                <!-- Product 4 -->
-                <div
-                    class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 fade-in">
-                    <div class="relative overflow-hidden">
-                        <img src="assets/images/product-4.png" alt="Kerudung Silk Premium"
-                            class="w-full h-48 sm:h-60 object-cover group-hover:scale-105 transition-transform duration-500" />
-                        <span
-                            class="absolute top-3 left-3 bg-amber-500 text-white text-[10px] font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Best
-                            Seller</span>
-                        <div
-                            class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300 flex items-center justify-center">
-                            <button
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-primary p-3 rounded-full shadow-lg hover:bg-primary hover:text-white">
-                                <i data-lucide="shopping-bag" class="w-4 h-4"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-medium text-gray-800 text-sm mb-1 truncate">Kerudung Silk Premium</h3>
-                        <p class="text-primary font-semibold">Rp 120.000</p>
-                    </div>
-                </div>
-
+            <div id="product-grid" class="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Dynamic products will be rendered by main.js -->
             </div>
+
 
             <!-- View All Button -->
             <div class="text-center mt-12 fade-in">
@@ -640,6 +551,90 @@
         </div>
     </footer>
 
+
+    <!-- ==================== PRODUCT DETAIL MODAL ==================== -->
+    <div id="product-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden-modal">
+        <!-- Modal Content Container -->
+        <div class="relative bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto flex flex-col md:flex-row transition-all duration-350">
+            
+            <!-- Close Button -->
+            <button id="modal-close-btn" class="absolute top-4 right-4 z-10 bg-white/80 backdrop-blur-sm hover:bg-primary hover:text-white text-gray-700 p-2 rounded-full shadow transition-all active:scale-95 animate-pulse" aria-label="Close modal">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <!-- Left: Gallery Column (1/2 width) -->
+            <div class="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between border-b md:border-b-0 md:border-r border-pink-50">
+                <div class="flex-grow flex flex-col justify-center">
+                    <div class="relative w-full aspect-square rounded-2xl overflow-hidden bg-pink-50 shadow-inner group">
+                        <img id="modal-main-img" src="" alt="" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                        <!-- Zoom indicator/badge -->
+                        <span class="absolute bottom-3 right-3 bg-black/40 text-white text-[10px] px-2.5 py-1 rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                            Hover to zoom
+                        </span>
+                    </div>
+                    <!-- Thumbnail gallery -->
+                    <div id="modal-thumbnails" class="flex gap-2 overflow-x-auto py-3 mt-4 scrollbar-thin scrollbar-thumb-primary scrollbar-track-softpink">
+                        <!-- Dynamic Thumbnails here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Content & Options Column (1/2 width) -->
+            <div class="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
+                <div>
+                    <!-- Category & Tag -->
+                    <div class="flex items-center gap-2 mb-3">
+                        <span id="modal-category" class="text-xs font-semibold tracking-wider text-primary uppercase bg-pink-50 px-2.5 py-1 rounded-full"></span>
+                        <span id="modal-tag" class="text-xs font-semibold tracking-wider text-white bg-amber-500 px-2.5 py-1 rounded-full hidden"></span>
+                    </div>
+
+                    <!-- Title -->
+                    <h2 id="modal-title" class="text-2xl md:text-3xl font-heading font-bold text-gray-900 mb-3"></h2>
+
+                    <!-- Price -->
+                    <div class="mb-4">
+                        <span id="modal-price" class="text-2xl font-bold text-primary"></span>
+                    </div>
+
+                    <!-- Divider -->
+                    <hr class="border-pink-50 mb-4" />
+
+                    <!-- Description -->
+                    <div class="mb-6">
+                        <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Deskripsi Produk</h4>
+                        <p id="modal-desc" class="text-gray-600 text-sm leading-relaxed whitespace-pre-line"></p>
+                    </div>
+
+                    <!-- Grade Selector (Visible only for variable products like Hiban) -->
+                    <div id="modal-grade-container" class="mb-5">
+                        <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Pilih Grade Bahan</h4>
+                        <div id="modal-grades" class="flex flex-wrap gap-2">
+                            <!-- Dynamic grades here -->
+                        </div>
+                        <p id="modal-grade-desc" class="text-xs text-gray-500 italic mt-1.5"></p>
+                    </div>
+
+                    <!-- Size Selector (Visible for variable products, or static sizes if applicable) -->
+                    <div id="modal-size-container" class="mb-6">
+                        <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Pilih Ukuran</h4>
+                        <div id="modal-sizes" class="flex flex-wrap gap-2">
+                            <!-- Dynamic sizes here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order via WhatsApp Action Button -->
+                <div class="pt-4 border-t border-pink-50 mt-auto">
+                    <a id="modal-wa-btn" href="" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-3.5 px-6 rounded-2xl transition-all shadow-lg shadow-emerald-100 hover:shadow-emerald-200 active:scale-[0.98]">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                        Pesan via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ==================== JAVASCRIPT ==================== -->
     <script src="assets/js/main.js"></script>
